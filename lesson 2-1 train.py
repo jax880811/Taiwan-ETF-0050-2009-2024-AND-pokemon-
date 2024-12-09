@@ -7,7 +7,7 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 import statsmodels.api as sm
 
 df=pd.read_csv('final.csv', encoding='cp1252',header=0)
-#df = df.fillna(df.mean()) #填補缺失的值
+
 
 plt.style.use('fivethirtyeight')
 x,y = df.loc[:,['adj close']],df.loc[:,['open']]

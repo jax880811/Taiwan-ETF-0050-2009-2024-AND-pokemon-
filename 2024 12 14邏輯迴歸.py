@@ -39,8 +39,11 @@ disp = ConfusionMatrixDisplay.from_estimator(logit, X_test, y_test,
                                              cmap=plt.cm.Blues)
 plt.grid()
 plt.show()
+print(logit.score(X_test,y_test))
 y_pred = logit.predict(X_test)
 print(classification_report(y_test, y_pred))
 test_score = logit.score(X_test, y_test) * 100
 print('邏輯迴歸 ACCURACY = ',test_score,'%')
 regression.append(test_score)
+
+

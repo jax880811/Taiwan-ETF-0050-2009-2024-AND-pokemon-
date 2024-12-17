@@ -24,4 +24,9 @@ Linear_svm.fit(X_train_std, y_train)
 
 y_pred = Linear_svm.predict(X_test_std)
 print(classification_report(y_test, y_pred))
+svm = SVC(kernel='sigmoid', C=5,gamma=.01,probability= True,class_weight='balanced')
+svm.fit(X_train_std, y_train)
+y_pred = svm.predict(X_test_std)
+print(classification_report(y_test, y_pred))
+
 

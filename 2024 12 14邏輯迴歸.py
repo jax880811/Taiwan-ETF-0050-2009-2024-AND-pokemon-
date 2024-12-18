@@ -41,7 +41,7 @@ plt.grid()
 plt.show()
 print(logit.score(X_test,y_test))
 y_pred = logit.predict(X_test)
-print(classification_report(y_test, y_pred))
+print(classification_report(y_test, y_pred)) #classification_report：輸出 精確率（Precision）、召回率（Recall）、F1-Score 等指標來評估模型性能
 test_score = logit.score(X_test, y_test) * 100
 print('邏輯迴歸 ACCURACY = ',test_score,'%')
 regression.append(test_score)
